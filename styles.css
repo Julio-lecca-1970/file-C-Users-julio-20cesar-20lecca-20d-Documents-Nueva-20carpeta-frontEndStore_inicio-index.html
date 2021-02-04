@@ -73,6 +73,7 @@ h3 {
     border-radius: .9rem;
     margin-left: 0.1rem;
     margin-right: 0.1rem;
+    with: 100%;
 }
 .footer__texto {
     font-family: var(--fuentePrincipal);
@@ -149,7 +150,7 @@ h3 {
     min-height: 30rem;
     background-repeat: no-repeat;
     background-size: cover;
-    grid-column: 1 / 3;
+    grid-column: 1 / 2;
 }
 .grafico--camisas {
     grid-row: 2 / 3;
@@ -159,6 +160,12 @@ h3 {
     background-image: url(../img/grafico2.jpg);
     grid-row: 8 / 9;  
 }
+@media (min-width: 768px) {
+    .grafico--camisas {
+        grid-column: 1 / 3;
+
+    }
+}
 
 @media (min-width: 768px) {
     .grafico--node {
@@ -166,6 +173,7 @@ h3 {
         grid-column: 2 / 4;
     }
 }
+
 
 /** Nosotros **/
 .body{

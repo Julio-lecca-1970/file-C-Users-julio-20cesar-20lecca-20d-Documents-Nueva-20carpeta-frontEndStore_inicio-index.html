@@ -73,6 +73,8 @@ h3 {
     border-radius: .9rem;
     margin-left: 0.1rem;
     margin-right: 0.1rem;
+    width: 100%;
+    background-size: cover;
 }
 .footer__texto {
     font-family: var(--fuentePrincipal);
@@ -109,7 +111,7 @@ h3 {
 /** Grid **/
 .grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+
     /*column-gap: 2rem;
     row-gap: 2rem;*//*--es otra opcion para separar los elementos fotos de costado y abajo*/
     gap: 2rem;/*opcion mas corta*/
@@ -149,7 +151,7 @@ h3 {
     min-height: 30rem;
     background-repeat: no-repeat;
     background-size: cover;
-    grid-column: 1 / 3;
+    grid-column: 1 / 2;
 }
 .grafico--camisas {
     grid-row: 2 / 3;
@@ -158,6 +160,12 @@ h3 {
 .grafico--node {
     background-image: url(../img/grafico2.jpg);
     grid-row: 8 / 9;  
+}
+@media (min-width: 768px) {
+    .grafico--camisas {
+        grid-column: 1 / 3;
+
+    }
 }
 
 @media (min-width: 768px) {
@@ -220,7 +228,13 @@ h3 {
 
 /** Pagina del Producto **/
 
-.producto__precio {
+.precio {
+    font-family: var(--fuentePrincipal);
+    margin: 1rem 0;
+    text-align: center;
+    line-height: 1.2;
+    font-size: 2.8rem;
+    color: var(--secundario);
     margin-top: 0;
     margin-bottom: 4rem;
 }
